@@ -1,0 +1,66 @@
+body.dark{
+    background:#121212;
+    color:white;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark li{
+    color:white;
+}
+
+body.dark .card,
+body.dark .interest-card,
+body.dark .contact-card{
+    background:#1e1e1e;
+    color:white;
+    border:1px solid #444;
+}
+
+body.dark #projects div{
+    background:#1e1e1e;
+    border-color:#555;
+}
+
+body.dark .nav{
+    background:#0d1117;
+}
+
+body.dark footer{
+    background:white}
+
+body.dark .hr2{
+    border-color:#666;
+}
+
+body.dark .about-me{
+    color:#ddd;
+}
+
+body.dark .title{
+    color:#ccc;
+}
+
+body.dark .contact-card a{
+    color:#66b3ff;
+}
+
+body.dark .contact-card img{
+    filter: invert(1);
+}
+
+body.dark footer a{
+    color: black;
+}
+
+body.dark footer p{
+    color: black;
+}
+
+body.dark footer a:hover{
+    text-decoration: underline;
+    color: black;
+}
