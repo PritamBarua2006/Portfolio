@@ -241,8 +241,7 @@ footer{
 #interest p{
     text-align: left;
     margin-left: 50px;;
-    font-size: large;
-    font-weight: bold;
+    font-size: medium;
 }
 .interest-grid{
 
@@ -279,9 +278,9 @@ footer{
 
 .interest-card img{
 
-    width:40px;
+    width:48px;
 
-    height:40px;
+    height:48px;
 
     margin-bottom:20px;
 
@@ -297,10 +296,45 @@ footer{
 
 .interest-card p{
 
+    font-weight: 400;
     line-height:1.7;
     color:#555;
-    margin-left: ;
+}
 
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card{
+    width: 250px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.contact-card a{
+    color: black;
+    text-decoration: none;
+}
+
+.contact-card a:hover{
+    text-decoration: underline;
+}
+
+.contact-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-card img{
+    width: 40px;
+    margin-bottom: 15px;
 }
 
 footer a:hover{
