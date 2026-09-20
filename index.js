@@ -1,52 +1,110 @@
-const button = document.getElementById("theme-toggle");
+/* =========================================================
+   DARK MODE
+========================================================= */
 
-button.addEventListener("click", () => {
+const themeButton = document.getElementById("theme-toggle");
+
+
+// Load previously selected theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeButton.textContent = "☀️";
+}
+
+
+// Toggle theme
+themeButton.addEventListener("click", () => {
 
     document.body.classList.toggle("dark");
 
-    if(document.body.classList.contains("dark")){
+    if (document.body.classList.contains("dark")) {
 
-        button.textContent = "☀️";
+        themeButton.textContent = "☀️";
 
-    }else{
+        localStorage.setItem("theme", "dark");
 
-        button.textContent = "🌙";
+    } else {
+
+        themeButton.textContent = "🌙";
+
+        localStorage.setItem("theme", "light");
 
     }
 
 });
 
-const sections=document.querySelectorAll("section");
 
-const navLinks=document.querySelectorAll(".nav-link");
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
 
-window.addEventListener("scroll",()=>{
+const sections = document.querySelectorAll("main section[id]");
 
-    let current="";
+const navLinks = document.querySelectorAll(".nav-link");
 
-    sections.forEach((section)=>{
 
-        const sectionTop=section.offsetTop-150;
+window.addEventListener("scroll", () => {
 
-        const sectionHeight=section.clientHeight;
+    let currentSection = "";
 
-        if(window.scrollY>=sectionTop){
+    sections.forEach((section) => {
 
-            current=section.getAttribute("id");
+        const sectionTop = section.offsetTop - 160;
 
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            currentSection = section.getAttribute("id");
         }
 
     });
 
-    navLinks.forEach((link)=>{
+
+    navLinks.forEach((link) => {
 
         link.classList.remove("active");
 
-        if(link.getAttribute("href")==="#"+current){
+        const linkTarget = link.getAttribute("href");
 
+        if (linkTarget === `#${currentSection}`) {
             link.classList.add("active");
-
         }
+
+    });
+
+});
+
+
+/* =========================================================
+   SMOOTH NAVIGATION
+========================================================= */
+
+navLinks.forEach((link) => {
+
+    link.addEventListener("click", (event) => {
+
+        const targetId = link.getAttribute("href");
+
+        if (!targetId || !targetId.startsWith("#")) {
+            return;
+        }
+
+        const target = document.querySelector(targetId);
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
 
     });
 
