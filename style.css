@@ -832,92 +832,546 @@ body.dark footer p {
 
 @media (max-width: 768px) {
 
+    /* Fixed navbar spacing */
     body {
-        padding-top: 110px;
+        padding-top: 70px;
     }
 
     .navbar-container {
         height: auto;
-
-        min-height: 65px;
+        min-height: 60px;
     }
 
     .nav {
-        width: 95%;
-
-        min-height: 65px;
-
-        padding: 8px 0;
-
-        gap: 2px;
+        width: 96%;
+        min-height: 60px;
+        padding: 5px 0;
+        gap: 0;
     }
 
     .nav-link {
-        padding: 7px 9px !important;
-
-        font-size: 14px;
+        padding: 6px 8px !important;
+        font-size: 13px;
     }
 
-    #about {
-        min-height: auto;
+    #theme-toggle {
+        padding: 5px 8px;
+        font-size: 18px;
+    }
 
+
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
+
+    section {
+        width: 92%;
+        padding: 35px 0;
+    }
+
+    .hr2 {
+        width: 92%;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    #about {
+        min-height: 0 !important;
+
+        height: auto;
+
+        padding-top: 25px;
+        padding-bottom: 35px;
+
+        display: flex;
         flex-direction: column-reverse;
 
-        text-align: center;
+        align-items: center;
+        justify-content: center;
 
-        padding-top: 50px;
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
     }
 
     .about-text h3 {
         text-align: center;
+        font-size: 17px;
+        margin-bottom: 3px;
+    }
+
+    .about-text h1 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    .title {
+        font-size: 14px;
+        margin-bottom: 12px;
     }
 
     .about-text hr {
-        margin: 20px auto;
+        width: 80%;
+        margin: 12px auto;
     }
 
     .about-me {
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 600px;
+        margin: 0 auto 10px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 
     .about-image {
         flex: none;
+        width: 100%;
     }
 
     .about-image .image {
-        width: 230px;
-        height: 230px;
+        width: 150px;
+        height: 150px;
+        border-width: 4px;
     }
 
     .buttons {
         justify-content: center;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .buttons .btn {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+
+    #skills {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    #skills h3,
+    #projects h3,
+    #education h3,
+    #interest h3,
+    #contact h3 {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    #skills > p {
+        font-size: 11px;
+        margin-bottom: 20px;
     }
 
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 
-        gap: 18px;
+    .skill-card {
+        border-radius: 8px;
     }
 
     .skill-card .card-img-top {
-        height: 140px;
+        height: 90px;
+        padding: 15px;
+    }
+
+    .skill-card .card-body {
+        padding: 7px;
+    }
+
+    .skill-card .card-text {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    #projects {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .section-subtitle {
+        font-size: 11px;
+        margin-bottom: 20px;
+    }
+
+    .projects-container {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .project-card {
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .project-card h4 {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .project-description {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .project-tech {
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .project-tech span {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+    .project-card h5 {
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+
+    .project-features {
+        padding-left: 17px;
+        margin-bottom: 15px;
+    }
+
+    .project-features li {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .project-buttons {
+        gap: 7px;
+    }
+
+    .project-buttons .btn {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .project-coming {
+        padding: 20px 15px;
+    }
+
+    .project-coming h4 {
+        font-size: 15px;
+    }
+
+    .project-coming p {
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       EDUCATION
+    ===================================================== */
+
+    #education {
+        padding-top: 35px;
+        padding-bottom: 35px;
     }
 
     .education-container {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .education-item {
+        padding: 15px;
+        border-left-width: 3px;
+    }
+
+    .education-item h4 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .education-item p {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .courses {
+        margin-top: 15px;
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       INTERESTS
+    ===================================================== */
+
+    #interest {
+        padding-top: 35px;
+        padding-bottom: 35px;
     }
 
     .interest-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 20px;
     }
 
-    .project-card {
-        padding: 25px;
+    .interest-card {
+        padding: 12px 7px;
+        border-radius: 8px;
     }
 
+    .interest-card > img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+
+    .music-images {
+        height: 60px;
+        gap: 2px;
+        margin-bottom: 8px;
+    }
+
+    .music-images img {
+        width: 40px;
+        height: 55px;
+    }
+
+    .interest-card h4 {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .interest-card p {
+        font-size: 8px;
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    #contact {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .contact-subtitle {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .contact-card {
+        padding: 15px 8px;
+        border-radius: 8px;
+    }
+
+    .contact-card img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 7px;
+    }
+
+    .contact-card h4 {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    .contact-card a,
+    .contact-card p {
+        font-size: 8px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        margin-top: 15px;
+        padding: 18px 10px;
+    }
+
+    footer p {
+        font-size: 9px;
+        margin-top: 5px;
+    }
+
+    .back-to-top {
+        font-size: 10px;
+    }
 }
 
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 65px;
+    }
+
+    .navbar-container {
+        min-height: 55px;
+    }
+
+    .nav {
+        min-height: 55px;
+        padding: 3px 0;
+    }
+
+    .nav-link {
+        font-size: 11px;
+        padding: 5px 5px !important;
+    }
+
+    #theme-toggle {
+        font-size: 16px;
+        padding: 4px 5px;
+    }
+
+
+    /* About */
+
+    #about {
+        padding-top: 20px;
+        padding-bottom: 25px;
+        gap: 15px;
+    }
+
+    .about-image .image {
+        width: 125px;
+        height: 125px;
+    }
+
+    .about-text h3 {
+        font-size: 14px;
+    }
+
+    .about-text h1 {
+        font-size: 29px;
+    }
+
+    .title {
+        font-size: 11px;
+    }
+
+    .about-me {
+        font-size: 9px;
+        line-height: 1.45;
+    }
+
+    .buttons {
+        margin-top: 10px;
+    }
+
+    .buttons .btn {
+        font-size: 9px;
+        padding: 5px 9px;
+    }
+
+
+    /* Skills */
+
+    .card-container {
+        gap: 7px;
+    }
+
+    .skill-card .card-img-top {
+        height: 75px;
+        padding: 12px;
+    }
+
+    .skill-card .card-body {
+        padding: 5px;
+    }
+
+    .skill-card .card-text {
+        font-size: 9px;
+    }
+
+
+    /* Interests */
+
+    .interest-grid {
+        gap: 6px;
+    }
+
+    .interest-card {
+        padding: 10px 5px;
+    }
+
+    .interest-card > img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .music-images {
+        height: 50px;
+    }
+
+    .music-images img {
+        width: 32px;
+        height: 45px;
+    }
+
+    .interest-card h4 {
+        font-size: 9px;
+    }
+
+    .interest-card p {
+        font-size: 7px;
+    }
+
+
+    /* Contact */
+
+    .contact-container {
+        gap: 6px;
+    }
+
+    .contact-card {
+        padding: 12px 5px;
+    }
+
+    .contact-card img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-card h4 {
+        font-size: 9px;
+    }
+
+    .contact-card a,
+    .contact-card p {
+        font-size: 7px;
+    }
+}
 
 /* =========================================================
    SMALL MOBILE
